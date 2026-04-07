@@ -729,6 +729,13 @@ section {
   right: 15px;
 }
 
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 300px; /* Or whatever height looks best on your grid */
+  object-fit: cover; /* This is the magic: it crops instead of stretching */
+  object-position: center;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
