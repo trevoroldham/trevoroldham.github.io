@@ -11,26 +11,17 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  background-color: #121212; /* Matte Black */
+  color: #e0e0e0; /* Light gray for body text readability */
 }
 
-a {
-  color: #0563bb;
-  text-decoration: none;
-}
 
 a:hover {
-  color: #067ded;
-  text-decoration: none;
+  color: #d7b4ff; /* Lighter purple on hover */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", sans-serif;
+a, h1, h2, h3, h4, h5, h6 {
+  color: #bb86fc; /* Purple accents */
 }
 
 /*--------------------------------------------------------------
@@ -138,10 +129,13 @@ h6 {
 
 @media (min-width: 991px) {
   #main {
-    margin-left: 100px;
+    margin-left: 0; /* Removes the transparent gap */
+  }
+  
+  section, #footer {
+    padding-left: 100px; /* Protects content from the sidebar, but lets the background stretch */
   }
 }
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -168,13 +162,13 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #45505b;
   padding: 10px 18px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: #f2f3f5;
+  background: #2d2d2d; /* Dark gray background for inactive items */
+  color: #e0e0e0; /* Light text */
   height: 56px;
   width: 100%;
   overflow: hidden;
@@ -184,16 +178,16 @@ h6 {
 .nav-menu a i,
 .nav-menu a:focus i {
   font-size: 20px;
+  color: #bb86fc; /* Purple icons by default */
 }
 
 .nav-menu a span,
 .nav-menu a:focus span {
   padding: 0 5px 0 7px;
-  color: #45505b;
+  color: #e0e0e0; /* Light text for dark mode */
 }
 
 @media (min-width: 992px) {
-
   .nav-menu a,
   .nav-menu a:focus {
     width: 56px;
@@ -202,34 +196,35 @@ h6 {
   .nav-menu a span,
   .nav-menu a:focus span {
     display: none;
-    color: #fff;
+    color: #e0e0e0;
   }
 }
 
+/* Base Hover and Active State (The Purple Pill) */
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
-  color: #fff;
-  background: #0563bb;
+  background: #bb86fc; 
+  color: #121212; 
+  width: 100%; /* Expands the pill */
 }
 
+/* Turn text dark so it is readable against the purple pill */
 .nav-menu a:hover span,
 .nav-menu .active span,
 .nav-menu .active:focus span,
 .nav-menu li:hover>a span {
-  color: #fff;
+  color: #121212;
+  display: block; /* Reveals text on hover */
 }
 
-.nav-menu a:hover,
-.nav-menu li:hover>a {
-  width: 100%;
-  color: #fff;
-}
-
-.nav-menu a:hover span,
-.nav-menu li:hover>a span {
-  display: block;
+/* Turn icon dark so it doesn't vanish into the purple background */
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #121212;
 }
 
 /**
@@ -271,23 +266,27 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
   background: url("../img/hero-bg.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
+  text-align: center; /* This forces the text to the horizontal center */
 }
 
 @media (min-width: 992px) {
   #hero {
-    padding-left: 160px;
+    padding-left: 100px; /* Accounts for your sidebar width to keep it perfectly centered */
   }
 }
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(18, 18, 18, 0.85); /* Your matte dark mode overlay */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -297,21 +296,21 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 64px;
+  font-size: 84px; /* Increased significantly from 64px */
   font-weight: 700;
-  line-height: 56px;
-  color: #45505b;
+  line-height: 84px;
+  color: #e0e0e0;
 }
 
 #hero p {
-  color: #45505b;
+  color: #e0e0e0;
   margin: 15px 0 0 0;
-  font-size: 26px;
+  font-size: 38px; /* Increased significantly from 26px */
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  color: #0563bb;
+  color: #bb86fc; /* Your dark mode purple accent */
   letter-spacing: 1px;
 }
 
@@ -320,41 +319,47 @@ h6 {
 }
 
 #hero .social-links a {
-  font-size: 24px;
+  font-size: 32px; /* Made the social icons a bit bigger to match */
   display: inline-block;
-  color: #45505b;
+  color: #bb86fc;
   line-height: 1;
-  margin-right: 20px;
+  margin: 0 15px; /* Spaced them out evenly */
   transition: 0.3s;
 }
 
 #hero .social-links a:hover {
-  color: #0563bb;
+  color: #d7b4ff;
 }
 
+/* Make sure it scales down nicely on mobile screens */
 @media (max-width: 992px) {
   #hero {
     text-align: center;
+    padding-left: 0;
   }
 
   #hero h1 {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 48px; 
+    line-height: 56px;
   }
 
   #hero p {
     margin-top: 10px;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 26px; 
+    line-height: 32px;
   }
 }
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
   overflow: hidden;
+  background-color: #121212;
+}
+
+.section-bg {
+  background-color: #1e1e1e; /* Slightly lighter matte for contrast */
 }
 
 .section-title {
@@ -369,8 +374,9 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #45505b;
+  color: #bb86fc;
 }
+
 
 .section-title h2::before {
   content: "";
@@ -389,7 +395,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #0563bb;
+  background: #bb86fc;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -404,7 +410,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #728394;
+  color:  #bb86fc;
 }
 
 .about .content ul {
@@ -431,6 +437,23 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.about .about-img-wrapper img {
+  border: 2px solid #333; /* Dark subtle border */
+  box-shadow: 10px 10px 0px rgba(187, 134, 252, 0.15); /* A modern, blocky purple shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.about .about-img-wrapper img:hover {
+  box-shadow: 15px 15px 0px rgba(187, 134, 252, 0.3); /* Intensifies on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Make sure the bold text pops in dark mode */
+.about .content strong {
+  color: #e0e0e0;
+  font-weight: 700;
 }
 
 /*--------------------------------------------------------------
@@ -492,7 +515,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #45505b;
+  color:  #bb86fc;
 }
 
 .skills .progress .skill .val {
@@ -508,7 +531,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #0563bb;
+  background-color: #bb86fc;
 }
 
 /*--------------------------------------------------------------
@@ -519,7 +542,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #45505b;
+  color: #bb86fc;
 }
 
 .resume .resume-item {
@@ -535,13 +558,12 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #0563bb;
+  color: #bb86fc;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #f7f8f9;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -1042,18 +1064,21 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+/* Replace the .contact .info styles near line 592 */
 .contact .info {
   width: 100%;
-  background: #fff;
+  background: transparent;
+  text-align: center; /* Centers the text */
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #0563bb;
-  float: left;
+  color: #bb86fc;
+  float: none; /* Removed float */
+  margin: 0 auto 15px auto; /* Centers the icon bubble */
   width: 44px;
   height: 44px;
-  background: #eef7ff;
+  background: #2d2d2d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1062,109 +1087,18 @@ section {
 }
 
 .contact .info h4 {
-  padding: 0 0 0 60px;
+  padding: 0; /* Reset padding */
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #45505b;
+  color: #bb86fc;
 }
 
 .contact .info p {
-  padding: 0 0 0 60px;
+  padding: 0; /* Reset padding */
   margin-bottom: 0;
   font-size: 14px;
   color: #728394;
-}
-
-.contact .info .email,
-.contact .info .phone {
-  margin-top: 40px;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #0563bb;
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email] {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #0563bb;
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #0678e3;
 }
 
 @keyframes animate-loading {
@@ -1181,7 +1115,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f7f8f9;
+  background: #bb86fc;
   color: #45505b;
   font-size: 14px;
   text-align: center;
