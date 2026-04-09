@@ -1111,6 +1111,13 @@ section {
   }
 }
 
+/* Align horizontal contact items on desktop */
+@media (min-width: 768px) {
+  .contact .info .email,
+  .contact .info .phone {
+    margin-top: 0 !important; 
+  }
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
