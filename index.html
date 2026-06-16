@@ -1,525 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trevor Oldham - Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
+  <!-- BoxIcons for Social Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
-
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" id="mobile-menu">
+        <i class='bx bx-menu'></i>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="pulse-link">CONTACT</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
-    </nav><!-- .nav-menu -->
+    </div>
+  </nav>
 
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Trevor Oldham</h1>
-      <p>I'm <span class="typed" data-typed-items="a Mathematician, a Software Engineer, an Investor/Trader"></span></p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/trevor-oldham-07143496/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/trevoroldham/" class="github"><i class="bx bxl-github"></i></a>
-
+  <!-- Hero Section -->
+  <section id="home" class="hero container">
+    <div class="hero-content">
+      <div class="hero-text reveal" style="display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%;">
+        <div style="position: relative; display: inline-block;">
+          <svg class="crescent-moon" viewBox="0 0 100 100" width="1100" height="1100" xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: -1; pointer-events: none; overflow: visible;">
+            <defs>
+              <mask id="moon-mask">
+                <rect x="-50" y="-50" width="200" height="200" fill="white" />
+                <circle cx="50" cy="125" r="60" fill="black" />
+              </mask>
+            </defs>
+            <circle cx="50" cy="80" r="45" fill="rgba(180, 220, 255, 0.08)" mask="url(#moon-mask)" />
+          </svg>
+          <h1 style="margin-bottom: 0;">Trevor Oldham</h1>
+        </div>
+        <div class="typing-text">I'm a <span id="typed"></span></div>
+        <p style="max-width: 600px; margin: 0 auto 1.5rem auto;">Engineering high-stakes systems. From managing capital volatility to writing code for physical quantum hardware, I translate deep mathematical logic into uncompromising, production-grade infrastructure.</p>
+        <div class="social-links" style="justify-content: center;">
+          <a href="https://www.linkedin.com/in/trevor-oldham-07143496/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://github.com/trevoroldham/" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
       </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>I am a recent graduate of the University of California at Berkeley College of Chemistry with a Master's in Molecular Science and Software Engineering.</p>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container reveal">
+      <h2>About Me</h2>
+      <div class="about-grid glass-card">
+        <div class="about-text">
+          <p style="text-align: justify;">I build uncompromising, high-impact systems. My trajectory hasn't followed a conventional corporate timeline—it was a highly calculated incubation period. Alongside earning a Bachelor's in Applied Mathematics and a Master's in Molecular Science and Software Engineering from UC Berkeley, I spent a decade independently executing quantitative risk management, deploying full-stack architectures, and developing algorithmic trading strategies.</p>
+          <p style="text-align: justify;">This foundation of rigorous, self-directed execution allows me to operate natively at the intersection of data science, machine learning, and quantum computing. Whether I am bending quantum algorithms to simulate molecular ground states, architecting scalable web applications from scratch, or extracting exact mathematical behaviors for asset allocation, I bring the structural density and intellectual horsepower required to execute at the bleeding edge. I don't just solve problems; I engineer robust, fully self-contained solutions.</p>
         </div>
-
-        <div class="row align-items-center">
-          
-          <div class="col-lg-4" data-aos="fade-right">
-            <div class="about-img-wrapper">
-              <img src="assets/img/profile-img.jpg" class="img-fluid rounded" alt="Trevor Oldham">
+        <div class="about-details">
+          <div class="detail-item">
+            <i class='bx bx-check-circle'></i>
+            <div>
+              <strong>Target Roles:</strong><br>
+              <span style="color: var(--text-secondary)">Software Engineer, ML Engineer, Quant Researcher</span>
             </div>
           </div>
-          
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Mathematician &amp; Software Scientist</h3>
-            
-            <p class="fst-italic mb-4" style="color: #bb86fc; font-size: 1.1rem;">
-              "Combining the rigorous logic of applied mathematics with the exploratory nature of molecular science to solve complex, high-impact problems."
-            </p>
-            
-            <p>
-              I am a well-rounded individual with a diverse academic background across multiple scientific domains. My educational journey—spanning community college, extensive online learning, and advanced university degrees—culminated in a Bachelor's in Applied Mathematics and a Master's in Molecular Science and Software Engineering. I have consistently demonstrated strong academic performance and a keen interest in cutting-edge technologies like cryptography, quantum computing, medicine, and space travel.
-            </p>
-            
-            <p>
-              My experience in education has been long but immensely rewarding. By attending three different institutions, I learned how to adapt quickly and synthesize knowledge across disciplines. Today, my primary focus lies at the intersection of <strong>data science, machine learning, software engineering, and computational chemistry</strong>.
-            </p>
-
-            <p>
-              Whether I am developing a molecular VQE simulator or researching new machine learning algorithms for battery design, I am driven by the desire to build tools that push scientific boundaries. I see myself as a prime candidate for careers applying these domains, with a particular interest in the aerospace or pharmaceutical industries.
-            </p>
-            
+          <div class="detail-item">
+            <i class='bx bx-check-circle'></i>
+            <div>
+              <strong>Industries:</strong><br>
+              <span style="color: var(--text-secondary)">Finance, Pharma, Tech, Aerospace</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <i class='bx bx-check-circle'></i>
+            <div>
+              <strong>Location Preference:</strong><br>
+              <span style="color: var(--text-secondary)">Remote Available</span>
+            </div>
           </div>
         </div>
-
       </div>
-    </section><!-- End About Section -->
+    </div>
+  </section>
 
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+  <!-- Experience & Education Section -->
+  <section id="experience">
+    <div class="container">
+      <h2>Journey</h2>
+      
+      <div class="about-grid">
+        
+        <!-- Experience -->
+        <div class="reveal">
+          <h3 style="margin-bottom: 2rem; color: var(--accent-blue);">Professional Experience</h3>
+          <div class="timeline">
+            
+            <div class="timeline-item">
+              <span class="timeline-date">2026 - Present</span>
+              <h4 class="timeline-title">Founder & Full-Stack Engineer</h4>
+              <div class="timeline-subtitle">MSA Core</div>
+              <p>Architected and built a full-stack language learning web application. Developed a custom spaced-repetition engine using PostgreSQL and FastAPI. Integrated Gemini and Google Cloud TTS with a React/Next.js frontend and Stripe subscription pipeline.</p>
             </div>
-
-            <div class="progress">
-              <span class="skill">C++ <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2024 - May 2024</span>
+              <h4 class="timeline-title">Machine Learning Intern</h4>
+              <div class="timeline-subtitle">Sepion Technologies</div>
+              <p>Research and development of machine learning algorithms for the prediction of properties of investigational battery designs. Produced a software package and web application for internal engineers.</p>
             </div>
-
-            <div class="progress">
-              <span class="skill">UNIX<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill">Java<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Matlab/Octave <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">R<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            
+            <div class="timeline-item">
+              <span class="timeline-date">2014 - Present</span>
+              <h4 class="timeline-title">Principal Quant Trader & Portfolio Manager</h4>
+              <div class="timeline-subtitle">Self-Employed</div>
+              <p>Managed a multi-strategy proprietary investment portfolio. Executed systematic trading strategies across digital assets and derivatives, demonstrating deep expertise in market micro-structure and DeFi.</p>
             </div>
 
           </div>
-
         </div>
 
-      </div>
-    </section><!-- End Skills Section -->
-
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>A collection of my work spanning quantum algorithm development, molecular simulation, and financial modeling.</p>
-      </div>
-
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/vqe-sim.jpg" class="img-fluid" alt="VQE Simulator">
-            <div class="portfolio-info">
-              <h4>VQE Molecular Simulator</h4>
-              <p>Variational Quantum Eigensolver implemented on IBM Heron hardware.</p>
-              <div class="portfolio-links">
-                <a href="vqe-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
+        <!-- Education -->
+        <div class="reveal">
+          <h3 style="margin-bottom: 2rem; color: var(--accent-blue);">Education</h3>
+          <div class="timeline">
+            
+            <div class="timeline-item">
+              <span class="timeline-date">May 2024</span>
+              <h4 class="timeline-title">Master of Molecular Science and Software Engineering</h4>
+              <div class="timeline-subtitle">UC Berkeley (GPA: 3.8)</div>
+              <p>Coursework: ML Algorithms, Data Science, Numerical Algorithms, Parallel Computing, Software Engineering.</p>
             </div>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/options.jpg" class="img-fluid" alt="VQE Simulator">
-            <div class="portfolio-info">
-              <h4>Quantum Amplitude Estimation</h4>
-              <p>A quantum algorithm for pricing European-style options</p>
-              <div class="portfolio-links">
-                <a href="options-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Bachelor's Degree</span>
+              <h4 class="timeline-title">Applied Mathematics</h4>
+              <div class="timeline-subtitle">Humboldt State University</div>
+              <p>Coursework: Real Analysis, Probability & Statistics, ODEs, Mathematical Modeling, Numerical Analysis.</p>
             </div>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-optimizer.jpg" class="img-fluid" alt="VQE Simulator">
-            <div class="portfolio-info">
-              <h4>Quantum Portfolio Optimizer</h4>
-              <p>A qiskit implmentation of VQE for Portfolio Optimization</p>
-              <div class="portfolio-links">
-                <a href="portfolio-optimizer-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
+            <div class="timeline-item">
+              <span class="timeline-date">Undergraduate Coursework</span>
+              <h4 class="timeline-title">Computer Science Foundations</h4>
+              <div class="timeline-subtitle">Mendocino College</div>
+              <p>Coursework: C++ Programming, Computer Organization, Discrete Structures, UNIX, Web Design.</p>
             </div>
+
           </div>
         </div>
 
       </div>
     </div>
   </section>
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Resume</h2>
-            <p>I have held a variety of roles that demonstrate my analytical skillset and adaptability. I am currently seeking professional opportunities to apply my academic expertise in molecular science and software engineering to complex, high-impact problems. My professional drive is fueled by a passion for continuous discovery—whether that means architecting quantum portfolio tools through rigorous self-study, analyzing digital asset markets, or finding creative outlets in electronic music production and international travel.</p>        </div>
-
-      
-
-        <div class="row mb-5">
-          <div class="col-lg-3">
-            <h3 class="resume-title mt-0">Education</h3>
-          </div>
-          <div class="col-lg-9">
-            <div class="resume-item">
-              <h4>Master of Molecular Science &amp; Software Engineering</h4>
-              <h5>2022 - 2024</h5>
-              <p><em>University of California at Berkeley, College of Chemistry</em></p>
-              <p>A part-time Masters program which focused on the development of software and algorithms for the exploration of molecular science. <br><strong>GPA: 3.806</strong></p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Arts in Applied Mathematics</h4>
-              <h5>2019 - 2021</h5>
-              <p><em>California Polytechnic at Humboldt</em></p>
-              <p>A program dedicated to teaching the foundational knowledge of applied mathematics including proofs, statistics, numerical analysis, and extensive topics relating to calculus and differential equations. <br><strong>GPA: 3.132</strong></p>
-            </div>
-            <div class="resume-item">
-              <h4>Associates for Transfer</h4>
-              <h5>2015 - 2019</h5>
-              <p><em>Mendocino Community College</em></p>
-              <p>Completed the CSU transfer requirements and general education with substantial crossover from computer science and engineering courses. <br><strong>GPA: 3.446</strong></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-3">
-            <h3 class="resume-title mt-0">Professional Experience</h3>
-          </div>
-          <div class="col-lg-9">
-            
-            <div class="resume-item">
-              <h4>Machine Learning Intern</h4>
-              <h5>Jan 2024 - May 2024</h5>
-              <p><em>Sepion Technologies, Remote</em></p>
-              <ul>
-                <li>Research and development of machine learning algorithms for the prediction of properties of investigational battery designs.</li>
-                <li>Production of a software package and web application for use by Sepion engineers.</li>
-              </ul>
-            </div>
-            
-            <div class="resume-item">
-              <h4>Lab / Field Technician</h4>
-              <h5>Mar 2018 - May 2018</h5>
-              <p><em>UC Cooperative Extension, Lakeport CA</em></p>
-              <ul>
-                <li>Gathered data on codling moths and prepared maps and field data for UC projects.</li>
-              </ul>
-            </div>
-            
-            <div class="resume-item">
-              <h4>Assistant Winemaker</h4>
-              <h5>Aug 2015 - Nov 2016</h5>
-              <p><em>Konocti Growers Cooperative, Kelseyville CA</em></p>
-              <ul>
-                <li>Assisted during crush season, followed procedures for testing free sulfates and specific gravity.</li>
-                <li>Ordered tools, maintained lab records, operated forklift, and ensured cleanliness.</li>
-              </ul>
-            </div>
-            
-            <div class="resume-item">
-              <h4>Lifeguard / Water Safety Instructor</h4>
-              <h5>May 2011 - Aug 2013</h5>
-              <p><em>City of Ukiah Municipal Pool, Ukiah CA</em></p>
-              <ul>
-                <li>Prepared lesson plans and taught daily swim classes to youth aged 3-15.</li>
-                <li>Acquired training in life-saving techniques, CPR, and First Aid.</li>
-              </ul>
-            </div>
-            
-            <div class="resume-item">
-              <h4>Volunteer Project Lead</h4>
-              <h5>May 2012 - May 2013</h5>
-              <p><em>City of Ukiah, CA</em></p>
-              <ul>
-                <li>Organized the construction of shade structures at the city skatepark.</li>
-                <li>Led the entire process from blueprint designs to fundraising, approval, construction, and installation.</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container reveal">
+      <h2>Skills and Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-tag">Python</div>
+        <div class="skill-tag">Java</div>
+        <div class="skill-tag">C++</div>
+        <div class="skill-tag">R</div>
+        <div class="skill-tag">SQL</div>
+        <div class="skill-tag">FastAPI</div>
+        <div class="skill-tag">React</div>
+        <div class="skill-tag">Next.js</div>
+        <div class="skill-tag">PostgreSQL</div>
+        <div class="skill-tag">AWS</div>
+        <div class="skill-tag">Machine Learning</div>
+        <div class="skill-tag">Data Science</div>
+        <div class="skill-tag">Software Engineering</div>
+        <div class="skill-tag">Quantitative Finance</div>
+        <div class="skill-tag">Portfolio Management</div>
+        <div class="skill-tag">Systematic Trading</div>
+        <div class="skill-tag">Risk Management</div>
+        <div class="skill-tag">Derivatives</div>
+        <div class="skill-tag">Market Microstructure</div>
+        <div class="skill-tag">System Architecture</div>
+        <div class="skill-tag">Design Patterns</div>
+        <div class="skill-tag">OOP</div>
+        <div class="skill-tag">Functional Programming</div>
+        <div class="skill-tag">Data Structures</div>
+        <div class="skill-tag">Data Modeling</div>
+        <div class="skill-tag">RESTful APIs</div>
+        <div class="skill-tag">Microservices</div>
+        <div class="skill-tag">CI/CD</div>
+        <div class="skill-tag">DevOps</div>
+        <div class="skill-tag">UNIX Shell</div>
+        <div class="skill-tag">Quantum Computing</div>
+        <div class="skill-tag">Numerical Analysis</div>
       </div>
+    </div>
+  </section>
 
-    </section><!-- End Resume Section -->
-
-   
-
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-blue">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-                </svg>
-                <i class="bx bxl-dribbble"></i>
-              </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-orange ">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-                </svg>
-                <i class="bx bx-file"></i>
-              </div>
-              <h4><a href="">Sed Perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-pink">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-                </svg>
-                <i class="bx bx-tachometer"></i>
-              </div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-yellow">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
-                </svg>
-                <i class="bx bx-layer"></i>
-              </div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-red">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-                </svg>
-                <i class="bx bx-slideshow"></i>
-              </div>
-              <h4><a href="">Dele Cardo</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-teal">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-                </svg>
-                <i class="bx bx-arch"></i>
-              </div>
-              <h4><a href="">Divera Don</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Services Section -->
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-<div class="row mt-1">
-
-  <div class="col-lg-10 mx-auto">
-    <div class="info">
-      
-      <div class="row">
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container reveal">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
         
-        <div class="col-md-4">
-          <div class="address">
-            <i class="bi bi-geo-alt"></i>
-            <h4>Location:</h4>
-            <p>Ukiah California</p>
+        <div class="glass-card project-card">
+          <h3>MSA Core</h3>
+          <p>Architected and built a full-stack language learning web application. Developed a custom spaced-repetition engine using PostgreSQL and FastAPI. Integrated Gemini and Google Cloud TTS to power voice-enabled AI personas, dynamically injecting the user's mastered vocabulary into prompt constraints. Tied the logic together with a React/Next.js frontend, strict state synchronization, and a fully automated Stripe subscription pipeline via webhooks.</p>
+          <div style="margin: 1rem 0; display: flex; gap: 1rem;">
+            <a href="https://msacore.app" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bx-link-external'></i> Website</a>
+          </div>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Next.js</span>
+            <span>FastAPI</span>
+            <span>PostgreSQL</span>
+            <span>AWS</span>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="email">
-            <i class="bi bi-envelope"></i>
-            <h4>Email</h4>
-            <p>trev.oldham@gmail.com</p>
+        <div class="glass-card project-card">
+          <h3>VQE Portfolio Optimization</h3>
+          <p>Translating continuous Markowitz Mean-Variance frameworks into Quadratic Unconstrained Binary Optimization (QUBO) structures allows hybrid algorithms like the Variational Quantum Eigensolver (VQE) to tackle discrete portfolio allocation. By integrating dynamic bit-encoding with hardware-efficient ansatzes, the model rigorously balances expected returns against market covariance under strict capital constraints. Utilizing stochastic optimizers alongside multi-start Qiskit Runtime sessions, this architecture effectively navigates steep penalty landscapes to bypass local minima and extract mathematically optimal asset distributions.</p>
+          <div style="margin: 1rem 0; display: flex; gap: 1rem;">
+            <a href="https://github.com/trevoroldham/VQE_portfolio_optimization" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bxl-github'></i> GitHub</a>
+            <a href="https://qubo-portfolio-rebalancer.streamlit.app/" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bx-link-external'></i> Streamlit App</a>
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Qiskit</span>
+            <span>Quantum Computing</span>
+            <span>Finance</span>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="phone">
-            <i class="bi bi-phone"></i>
-            <h4>Phone</h4>
-            <p>1 707 272 0013</p>
+        <div class="glass-card project-card">
+          <h3>Quantum Option Pricing</h3>
+          <p>Quantum Amplitude Estimation (QAE) redefines the evaluation of financial instruments by offering a provable quadratic speedup over classical Monte Carlo methods. By mapping probability distributions directly into quantum states and applying amplitude amplification, this pipeline rapidly accelerates the convergence of complex pricing models. This structural advantage enables the precise calculation of expected option payoffs in highly volatile markets, streamlining quantitative risk analysis while significantly reducing computational overhead.</p>
+          <div style="margin: 1rem 0; display: flex; gap: 1rem;">
+            <a href="https://github.com/trevoroldham/quantum_option_pricing" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bxl-github'></i> GitHub</a>
+            <a href="https://quantum-option-price.streamlit.app/" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bx-link-external'></i> Streamlit App</a>
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Quantum Computing</span>
+            <span>Quantitative Finance</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card">
+          <h3>Portfolio Rebalancer</h3>
+          <p>A production-grade classical web application designed to bridge the gap between quantum-inspired optimization and real-world portfolio management. This tool takes the exact QUBO mapping and mathematical constraints from a quantum portfolio project and executes them locally using Qiskit's NumPyMinimumEigensolver. By moving away from noisy QPU hardware to an exact classical eigensolver, it isolates the mathematical behavior of discrete asset allocation while maintaining the rigorous constraint mapping required for quantum execution.</p>
+          <div style="margin: 1rem 0; display: flex; gap: 1rem;">
+            <a href="https://github.com/trevoroldham/portolio_rebalancer" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bxl-github'></i> GitHub</a>
+            <a href="https://qubo-portfolio-rebalancer.streamlit.app/" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bx-link-external'></i> Streamlit App</a>
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Optimization</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card">
+          <h3>Molecular VQE</h3>
+          <p>A scalable, modular command-line tool and web application for simulating molecular ground states using the Variational Quantum Eigensolver (VQE). Quantum computing transcends classical binary limitations by leveraging superposition to navigate high-dimensional optimization problems. Built on IBM's Qiskit ecosystem, this project maps fermionic operators to a qubit Hamiltonian, utilizing hardware-efficient ansätze and active space approximations. It allows researchers to seamlessly route circuits from local statevector simulation to cloud-native physical IBM Quantum processors.</p>
+          <div style="margin: 1rem 0; display: flex; gap: 1rem;">
+            <a href="https://github.com/trevoroldham/molecular_vqe" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bxl-github'></i> GitHub</a>
+            <a href="https://molecular-vqe.streamlit.app/" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bx-link-external'></i> Streamlit App</a>
+          </div>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Qiskit</span>
+            <span>Computational Chemistry</span>
+          </div>
+        </div>
+
+        <div class="glass-card project-card">
+          <h3>CNDO/2 Implementation</h3>
+          <p>A comprehensive C++ implementation of the CNDO/2 computational quantum chemistry model, featuring Direct Inversion in the Iterative Subspace (DIIS) and Broyden–Fletcher–Goldfarb–Shanno (BFGS) optimization. Developed for UC Berkeley's CHEM 279, this project calculates analytical gradients and performs self-consistent field (SCF) minimization on closed or open-shell molecules. It provides a robust, low-level framework for evaluating molecular integrals and optimizing bond lengths using advanced numerical algorithms.</p>
+          <div style="margin: 1rem 0; display: flex; gap: 1rem;">
+            <a href="https://github.com/trevoroldham/CHEM279FinalProject" target="_blank" style="font-size: 0.9rem; font-weight: 500;"><i class='bx bxl-github'></i> GitHub</a>
+          </div>
+          <div class="project-tech">
+            <span>C++</span>
+            <span>Computational Chemistry</span>
+            <span>Quantum Mechanics</span>
           </div>
         </div>
 
       </div>
-
     </div>
-  </div>
+  </section>
 
-</div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Trevor Oldham</h3>
-      <p></p>
-<!--       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div> -->
-      <div class="copyright">
-        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: [license-url] -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container reveal">
+      <h2>Get In Touch</h2>
+      <div class="glass-card" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <p style="text-align: center;">I'm currently open to new opportunities and would love to hear from you. Whether you have a question or just want to say hi, feel free to reach out!</p>
+        <div style="margin: 2rem 0; font-size: 1.2rem;">
+          <div style="margin-bottom: 1rem;">
+            <i class='bx bx-phone' style="color: var(--accent-blue); margin-right: 0.5rem;"></i> <strong>707-272-0013</strong>
+          </div>
+          <div>
+            <i class='bx bx-envelope' style="color: var(--accent-blue); margin-right: 0.5rem;"></i> <strong><a href="mailto:trev.oldham@gmail.com">trev.oldham@gmail.com</a></strong>
+          </div>
+        </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </section>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
+  <!-- JS -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
