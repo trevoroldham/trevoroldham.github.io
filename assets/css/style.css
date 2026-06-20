@@ -412,6 +412,15 @@ nav {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+  nav {
+    padding: 1rem 0;
+  }
+  
+  .detail-item {
+    justify-content: center;
+    text-align: left;
+  }
+  
   .nav-container {
     justify-content: flex-end;
   }
